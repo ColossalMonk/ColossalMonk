@@ -155,7 +155,7 @@ body {
 }
 
 .button:hover {
-    background-color: linear-gradient(135deg, #707070, #323232);
+    background: linear-gradient(135deg, #707070, #323232);
     transform: scale(1.05);
 }
 
