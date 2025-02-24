@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+}
+
+.threeD-side {
+    position: relative;
+    left: -3em;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #fff;
+}
+
+#spline-model {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.profile-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    width: 50%;
+    left: -5%;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-icon {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}
+
+.profile-title {
+    text-align: center;
+}
+
+.profile-name {
+    font-size: 28px;
+    font-weight: 900;
+    text-align: left;
+}
+
+.profile-alias {
+    font-size: 18px;
+    color: #888;
+    font-weight: 700;
+    text-align: left;
+}
+
+.profile-title-line {
+    font-family: 'Exo', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.profile-info {
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.resume-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Exo', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    width: 100%;
+    gap: 10px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #883fe0 0%, #F37E7E 100%);
+    /* linear-gradient(135deg, #505050, #191919); */
+    /* border-image: radial-gradient(circle at top left, #883FE0, #F37E7E); */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.resume-button:hover {
+    background-image: linear-gradient(135deg, #9746f9, #fb8888);
+    transform: scale(1.01);
+}
+
+.lets-connect {
+    font-family: 'Exo', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #505050 0%, #161616 100%);
+    /* border: 1px solid rgba(128, 0, 128, 0.3); */
+    font-family: 'Exo', sans-serif;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background-color: linear-gradient(135deg, #707070, #323232);
+    transform: scale(1.05);
+}
+
+.button-icon {
+    width: 35px;
+    height: 35px;
+    position: relative;
+}
+
+/* .button-icon::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    z-index: -1;
+} */
+
+@media (max-width: 1024px) {
+    .threeD-side {
+        left: 0rem;
+    }    
+    .profile-side {
+        /* width: 100%; */
+        left: 0rem;
+    }
+
+    .profile-name {
+        font-size: 23px;
+    }
+
+    .profile-alias {
+        font-size: 15px;
+    }
+
+    .profile-title-line {
+        font-size: 17px;
+    }    
+
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .threeD-side {
+        height: 25em; 
+    }
+
+    .profile-side {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-name {
+        font-size: 20px;
+    }
+
+    .profile-alias {
+        font-size: 12px;
+    }
+
+    .profile-title-line {
+        font-size: 14px;
+    }
+
+    .resume-button {
+        padding: 5px;
+        letter-spacing: 1.5px;
+        border-radius: 10px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+}

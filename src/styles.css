@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ==========================================================================
+   🌍 Global Styles
+   ========================================================================== */
+   body {
+    font-family: "Montserrat", sans-serif;
+    background: #000;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   📌 Layout Structure
+   ========================================================================== */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 1024px;
+    width: 1440px;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   🎨 ThreeD Model Side (Left Side)
+   ========================================================================== */
+.threeD-side {
+    width: 45%;
+    height: 100%;
+    position: relative;
+    top: -10%;
+    left: -5%;
+    transform: scale(0.9);
+}
+
+/* ==========================================================================
+   📝 Profile Side (Right Side)
+   ========================================================================== */
+.profile-side {
+    max-width: 45%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+/* ==========================================================================
+   📸 Profile Image and Name
+   ========================================================================== */
+.profile-title-area {
+    display: flex;
+    gap: 5%;
+    margin-bottom: 5%;
+}
+
+.profile-icon {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.profile-name {
+    font-size: 60px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.profile-sub-name {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   ✨ Profile Title
+   ========================================================================== */
+.profile-title-line1, .profile-title-line2 {
+    font-family: 'Exo', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+}
+
+.profile-info {
+    font-family: 'Exo', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300; 
+}
+
+/* ==========================================================================
+   📝 Resume Button
+   ========================================================================== */
+.resume-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    background-clip: padding-box, border-box;
+    border: 2px solid transparent;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(135deg, #505050, #191919), radial-gradient(circle at top left, #F37E7E ,#883FE0);
+    border-image-slice: 1;
+}
+
+.resume-button-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+.resume-button-icon {
+    width: 37.5px;
+    height: 37.5px;
+    padding: 5%;
+}
+
+.resume-button-text {
+    color: white;
+    font-family: 'Exo', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.resume-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(255, 77, 255, 0.4);
+}
+
+/* ==========================================================================
+   🚀 Let's Connect
+   ========================================================================== */
+.lets-connect {
+    margin-top: 20px;
+    font-family: 'Exo', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin: 5%;
+}
+
+/* ==========================================================================
+   🔗 Social Links Section
+   ========================================================================== */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* ==========================================================================
+   🎯 Buttons & CTAs
+   ========================================================================== */
+   .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Standard size */
+    width: 125px;
+    height: 125px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    background-clip: padding-box, border-box;
+    border: 2px solid transparent;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(135deg, #505050, #191919), radial-gradient(circle at top left, #883FE0, #F37E7E);
+    border-image-slice: 1;
+}
+
+.button-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.button-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.button-text {
+    color: white;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(255, 77, 255, 0.4);
+}
