@@ -1,89 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siddhartha Satyarthi</title>
-    <link rel="stylesheet" href="/src/global.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>
-    <div class="container">
-        <!-- 3D Model Section -->
-        <div class="threeD-side">
-            <!-- <div id="loading" class="loading">Loading 3D Model...</div> -->
-            <iframe src="https://my.spline.design/robotfollowcursorforlandingpage-ba725d0b4a34c2530a8ab8e168ce0730/"
-                    title="3D Model" id="spline-model" frameborder="0"></iframe>
-        </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Siddhartha Satyarthi | Product Manager & XR Developer</title>
+		<link rel="stylesheet" href="/src/global.css" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<meta
+			name="description"
+			content="Product Manager & XR Developer. Building products, crafting XR experiences, and mentoring startups."
+		/>
+		<meta property="og:title" content="Siddhartha Satyarthi" />
+		<meta
+			property="og:description"
+			content="Product Manager & XR Developer. Building products, crafting XR experiences, and mentoring startups."
+		/>
+	</head>
+	<body>
+		<main class="container">
+			<!-- 3D Model Section -->
+			<section class="threeD-side">
+				<div id="loading" class="loading">
+					<div class="spinner"></div>
+					<span>Loading 3D Experience...</span>
+				</div>
+				<iframe
+					src="https://my.spline.design/robotfollowcursorforlandingpage-ba725d0b4a34c2530a8ab8e168ce0730/"
+					title="3D Model"
+					id="spline-model"
+					frameborder="0"
+					onload="document.getElementById('loading').style.display='none';"
+				></iframe>
+			</section>
 
-        <!-- Profile Section -->
-        <div class="profile-side">
-            <div class="profile-header">
-                <img src="/profile.png" alt="Profile Icon" class="profile-icon">
-                <div class="profile-title">
-                    <h1 class="profile-name">Siddhartha Satyarthi</h1>
-                    <h2 class="profile-alias">a.k.a ColossalMonk</h2>
-                </div>
-            </div>
-            <div class="profile-title-line">
-              <h3>Product Manager | Mentored 200+ Startups</h3>
-              <h3>XR (AR/VR) Developer</h3>
-            </div>
-            
-            <p class="profile-info">Hey there! 👋🏼 I build products, craft XR & game experiences, and provide mentoring.</p>
+			<!-- Profile Section -->
+			<section class="profile-side">
+				<div class="profile-header">
+					<div class="profile-image-container">
+						<img
+							src="/profile.png"
+							alt="Siddhartha Satyarthi"
+							class="profile-icon"
+						/>
+					</div>
+					<div class="profile-title">
+						<h1 class="profile-name">Siddhartha Satyarthi</h1>
+						<h2 class="profile-alias">
+							a.k.a <span class="highlight">ColossalMonk</span>
+						</h2>
+					</div>
+				</div>
 
-            <a href="/resume.pdf" class="resume-button" download>
-                <img src="/icons/resume.png" alt="Resume" class="button-icon">
-                <span>Resume</span>
-            </a>
+				<div class="profile-title-line">
+					<div class="title-badge">Product Manager</div>
+					<div class="title-badge">XR Developer</div>
+					<div class="title-badge">Startup Mentor</div>
+				</div>
 
-            <div class="lets-connect">Let's Connect! 🚀</div>
+				<p class="profile-info">
+					Hey there! <span class="wave">👋🏼</span> I build innovative products,
+					craft immersive XR & game experiences, and have mentored 200+ startups
+					on their journey to success.
+				</p>
 
-            <div class="social-links">
-                <a href="mailto:17siddhartha.satyarthi@gmail.com" class="button">
-                    <img src="/icons/mail.png" alt="Mail" class="button-icon">
-                    <span>Mail</span>
-                </a>
-                <a href="https://linkedin.com/in/colossalmonk" class="button">
-                    <img src="/icons/linkedin.png" alt="LinkedIn" class="button-icon">
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://instagram.com/colossalmonk" class="button">
-                    <img src="/icons/instagram.png" alt="Instagram" class="button-icon">
-                    <span>Instagram</span>
-                </a>
-                <a href="https://www.snapchat.com/add/colossalmonk?share_id=uuZOJSdMhEc&locale=en-GB" class="button">
-                    <img src="/icons/snapchat.png" alt="Snapchat" class="button-icon">
-                    <span>Snapchat</span>
-                </a>
-                <a href="https://github.com/ColossalMonk" class="button">
-                    <img src="/icons/github.png" alt="GitHub" class="button-icon">
-                    <span>GitHub</span>
-                </a>
-                <a href="https://twitter.com/ColossalMonk" class="button">
-                    <img src="/icons/twitter.png" alt="Twitter" class="button-icon">
-                    <span>Twitter</span>
-                </a>
-                <a href="https://wa.me/917838325157" class="button">
-                    <img src="/icons/whatsapp.png" alt="WhatsApp" class="button-icon">
-                    <span>WhatsApp</span>
-                </a>
-                <a href="#" class="button">
-                    <img src="/icons/portfolio.png" alt="Portfolio" class="button-icon">
-                    <span>Portfolio</span>
-                </a>
-            </div>
-        </div>
-    </div>
+				<a href="/resume.pdf" class="resume-button" download>
+					<img src="/icons/resume.png" alt="Resume" class="button-icon" />
+					<span>Download Resume</span>
+				</a>
 
-    <script>
-        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-      </script>
-      <script defer src="/_vercel/speed-insights/script.js"></script>
-      <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-      </script>
-      <script defer src="/_vercel/insights/script.js"></script>
-</body>
+				<div class="section-divider">
+					<span class="divider-line"></span>
+					<span class="divider-text">Let's Connect! 🚀</span>
+					<span class="divider-line"></span>
+				</div>
+
+				<div class="social-links">
+					<a
+						href="mailto:17siddhartha.satyarthi@gmail.com"
+						class="button"
+						aria-label="Email"
+					>
+						<div class="button-content">
+							<img src="/icons/mail.png" alt="" class="button-icon" />
+							<span>Mail</span>
+						</div>
+					</a>
+					<a
+						href="https://linkedin.com/in/colossalmonk"
+						class="button"
+						aria-label="LinkedIn"
+					>
+						<div class="button-content">
+							<img src="/icons/linkedin.png" alt="" class="button-icon" />
+							<span>LinkedIn</span>
+						</div>
+					</a>
+					<a
+						href="https://instagram.com/colossalmonk"
+						class="button"
+						aria-label="Instagram"
+					>
+						<div class="button-content">
+							<img src="/icons/instagram.png" alt="" class="button-icon" />
+							<span>Instagram</span>
+						</div>
+					</a>
+					<a
+						href="https://www.snapchat.com/add/colossalmonk?share_id=uuZOJSdMhEc&locale=en-GB"
+						class="button"
+						aria-label="Snapchat"
+					>
+						<div class="button-content">
+							<img src="/icons/snapchat.png" alt="" class="button-icon" />
+							<span>Snapchat</span>
+						</div>
+					</a>
+					<a
+						href="https://github.com/ColossalMonk"
+						class="button"
+						aria-label="GitHub"
+					>
+						<div class="button-content">
+							<img src="/icons/github.png" alt="" class="button-icon" />
+							<span>GitHub</span>
+						</div>
+					</a>
+					<a
+						href="https://twitter.com/ColossalMonk"
+						class="button"
+						aria-label="Twitter"
+					>
+						<div class="button-content">
+							<img src="/icons/twitter.png" alt="" class="button-icon" />
+							<span>Twitter</span>
+						</div>
+					</a>
+					<a
+						href="https://wa.me/917838325157"
+						class="button"
+						aria-label="WhatsApp"
+					>
+						<div class="button-content">
+							<img src="/icons/whatsapp.png" alt="" class="button-icon" />
+							<span>WhatsApp</span>
+						</div>
+					</a>
+					<a href="#" class="button" aria-label="Portfolio">
+						<div class="button-content">
+							<img src="/icons/portfolio.png" alt="" class="button-icon" />
+							<span>Portfolio</span>
+						</div>
+					</a>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<p>
+				© <span id="current-year">2025</span> Siddhartha Satyarthi. All rights
+				reserved.
+			</p>
+		</footer>
+
+		<script>
+			// Set current year
+			document.getElementById('current-year').textContent =
+				new Date().getFullYear();
+
+			// Loading animation handling
+			const iframe = document.getElementById('spline-model');
+			const loading = document.getElementById('loading');
+
+			iframe.addEventListener('load', function () {
+				loading.classList.add('fade-out');
+				setTimeout(() => {
+					loading.style.display = 'none';
+				}, 500);
+			});
+
+			// Add analytics scripts
+			window.si =
+				window.si ||
+				function () {
+					(window.siq = window.siq || []).push(arguments);
+				};
+			window.va =
+				window.va ||
+				function () {
+					(window.vaq = window.vaq || []).push(arguments);
+				};
+		</script>
+		<script defer src="/_vercel/speed-insights/script.js"></script>
+		<script defer src="/_vercel/insights/script.js"></script>
+	</body>
 </html>
-
