@@ -118,8 +118,19 @@
       addEventListener('resize', resize);
 
       let dishX = innerWidth / 2;
-      addEventListener('pointermove', (e) => { dishX = e.clientX; });
+      const mouse = { x: -100, y: -100, seen: false, overLink: false };
+      const trail = [];
+      let cursorA = 0;
+      addEventListener('pointermove', (e) => {
+        dishX = e.clientX;
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+        mouse.seen = true;
+      });
       addEventListener('touchmove', (e) => { dishX = e.touches[0].clientX; }, { passive: true });
+      const homeLink = document.querySelector('.hud a');
+      homeLink.addEventListener('mouseenter', () => { mouse.overLink = true; });
+      homeLink.addEventListener('mouseleave', () => { mouse.overLink = false; });
 
       const sparks = [];
       let score = 0;
@@ -182,6 +193,25 @@
         ctx.arc(dishX * dpr, dishY * dpr, (dishW / 2) * dpr, 0.15 * Math.PI, 0.85 * Math.PI);
         ctx.stroke();
         ctx.restore();
+
+        // the cursor is a spark too — silver, with a comet trail
+        if (mouse.seen && !mouse.overLink) {
+          trail.unshift({ x: mouse.x, y: mouse.y });
+          if (trail.length > 14) trail.pop();
+          for (let i = trail.length - 1; i > 0; i--) {
+            ctx.globalAlpha = 0.4 * (1 - i / trail.length);
+            drawSpark(trail[i].x, trail[i].y, 4 + 4 * (1 - i / trail.length), cursorA - i * 0.12, SILVER);
+          }
+          ctx.globalAlpha = 1;
+          cursorA += 0.035;
+          ctx.save();
+          ctx.shadowColor = GOLD;
+          ctx.shadowBlur = 14 * dpr;
+          drawSpark(mouse.x, mouse.y, 9, cursorA, SILVER);
+          ctx.restore();
+        } else {
+          trail.length = 0;
+        }
 
         requestAnimationFrame(frame);
       }
