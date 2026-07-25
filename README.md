@@ -65,8 +65,8 @@ business calls 24/7 for Indian SMBs.
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=ColossalMonk&show_icons=true&bg_color=0B0B0D&border_color=26262B&title_color=C9A96A&icon_color=C9A96A&text_color=C9C9D1&ring_color=C9A96A" alt="GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ColossalMonk&layout=compact&langs_count=8&bg_color=0B0B0D&border_color=26262B&title_color=C9A96A&text_color=C9C9D1" alt="Top languages" />
+<img height="165" src="https://github-readme-stats-eight-lemon.vercel.app/api?username=ColossalMonk&show_icons=true&bg_color=0B0B0D&border_color=26262B&title_color=C9A96A&icon_color=C9A96A&text_color=C9C9D1&ring_color=C9A96A" alt="GitHub stats" />
+<img height="165" src="https://github-readme-stats-eight-lemon.vercel.app/api/top-langs/?username=ColossalMonk&layout=compact&langs_count=8&bg_color=0B0B0D&border_color=26262B&title_color=C9A96A&text_color=C9C9D1" alt="Top languages" />
 
 <img src="https://streak-stats.demolab.com/?user=ColossalMonk&background=0B0B0D&border=26262B&ring=C9A96A&fire=C9A96A&currStreakLabel=C9A96A&sideLabels=C9C9D1&currStreakNum=F5F5F7&sideNums=F5F5F7&dates=8B8B93" alt="GitHub streak" />
 
