@@ -1,0 +1,86 @@
+/* ─────────────────────────────────────────────
+   DESIGN TOKENS — "premium kinetic", dual voice
+   Graphite darkness, silver type, one restrained
+   violet accent — with the holo gradient kept as
+   the single expressive moment on key words.
+   (v4 — Apple-grade pivot after audience feedback.)
+   ───────────────────────────────────────────── */
+:root {
+  /* color — graphite world (dark-first) */
+  --paper: #0b0b0d;
+  --paper-deep: #151519;
+  --ink: #f5f5f7;
+  --ink-soft: #c9c9d1;
+  --muted: #8b8b93;
+  --line: #26262b;
+
+  /* color — deepest sections (the work "pro" moment) */
+  --dark: #050506;
+  --dark-surface: #101015;
+  --dark-line: #232329;
+  --dark-text: #f5f5f7;
+  --dark-muted: #8e8e96;
+
+  /* accents — champagne gold interactive + silver CTA */
+  --accent: #c9a96a;
+  --pop: #f5f5f7;
+
+  /* the one expressive gradient — machined silver, Apple-style */
+  --grad-metal: linear-gradient(180deg, #ffffff 8%, #d8d8de 55%, #94949c 100%);
+
+  /* type */
+  --font-display: 'Switzer', 'Segoe UI', -apple-system, sans-serif;
+  --font-body: 'Switzer', 'Segoe UI', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Cascadia Code', Consolas, monospace;
+
+  --text-hero: clamp(2.6rem, 7.6vw, 6.9rem);
+  --text-display: clamp(2.1rem, 4.4vw, 4rem);
+  --text-heading: clamp(1.6rem, 2.8vw, 2.5rem);
+  --text-subhead: clamp(1.125rem, 1.7vw, 1.5rem);
+  --text-body: clamp(1rem, 1.1vw, 1.125rem);
+  --text-small: clamp(0.8rem, 0.9vw, 0.875rem);
+  --text-micro: 0.72rem;
+
+  --leading-tight: 1.02;
+  --leading-snug: 1.12;
+  --leading-normal: 1.55;
+  --tracking-tight: -0.035em;
+  --tracking-snug: -0.02em;
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.14em;
+
+  /* space */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  --section-pad: clamp(4.5rem, 11vw, 9rem);
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+
+  /* containers */
+  --container-default: 1200px;
+  --container-wide: 1400px;
+
+  /* z */
+  --z-below: -1;
+  --z-base: 0;
+  --z-raised: 10;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-curtain: 900;
+
+  /* motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.76, 0, 0.24, 1);
+
+  /* radii */
+  --radius: 8px;
+  --radius-lg: 18px;
+}

@@ -1,0 +1,19 @@
+# dependencies
+node_modules
+
+# build output
+dist
+
+# original Flow renders (compressed copies live in public/media)
+flow-renders
+
+# editor / os
+.DS_Store
+*.local
+
+# logs
+npm-debug.log*
+
+# local tooling
+.claude/
+*.tsbuildinfo

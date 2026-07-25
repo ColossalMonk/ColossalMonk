@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0B0B0D" />
+    <meta name="robots" content="noindex" />
+    <title>404 · Spark Catcher · ColossalMonk</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { height: 100%; }
+      body {
+        font-family: 'Switzer', 'Segoe UI', sans-serif;
+        background: #0b0b0d;
+        color: #f5f5f7;
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+      }
+      canvas { position: fixed; inset: 0; width: 100vw; height: 100vh; cursor: none; }
+      .hud {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-content: center;
+        gap: 14px;
+        text-align: center;
+        pointer-events: none;
+        z-index: 2;
+      }
+      .hud .eyebrow {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #8b8b93;
+      }
+      .hud .eyebrow .spark { color: #c9a96a; }
+      .hud h1 {
+        font-size: clamp(2.4rem, 8vw, 5.4rem);
+        font-weight: 600;
+        letter-spacing: -0.035em;
+        line-height: 1.02;
+      }
+      .hud h1 em {
+        font-style: normal;
+        background: linear-gradient(180deg, #ffffff 8%, #d8d8de 55%, #94949c 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hud p { color: #8b8b93; font-size: 1rem; max-width: 34ch; margin-inline: auto; }
+      .hud .score {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.85rem;
+        color: #c9a96a;
+        min-height: 1.4em;
+      }
+      .hud a {
+        pointer-events: auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 12px 26px;
+        margin-inline: auto;
+        border-radius: 980px;
+        background: #f5f5f7;
+        color: #0b0b0d;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.85rem;
+        text-decoration: none;
+        transition: transform 0.25s ease, background-color 0.25s ease;
+      }
+      .hud a:hover { transform: translateY(-2px); background: #ffffff; }
+      .grain {
+        position: fixed; inset: 0; pointer-events: none; z-index: 3;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-size: 200px; opacity: 0.035; mix-blend-mode: screen;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="game" aria-hidden="true"></canvas>
+    <div class="hud">
+      <p class="eyebrow"><span class="spark">✺</span> 404 · page not found</p>
+      <h1>This page drifted <em>into the void.</em></h1>
+      <p>The sparks that made it are still falling. Catch a few with the dish while you decide where to go.</p>
+      <p class="score" id="score"></p>
+      <a href="/">Take me home</a>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+    <script>
+      const canvas = document.getElementById('game');
+      const ctx = canvas.getContext('2d');
+      const scoreEl = document.getElementById('score');
+      const GOLD = '#c9a96a';
+      const SILVER = '#d8d8de';
+      let W, H, dpr;
+      function resize() {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        W = canvas.width = innerWidth * dpr;
+        H = canvas.height = innerHeight * dpr;
+      }
+      resize();
+      addEventListener('resize', resize);
+
+      let dishX = innerWidth / 2;
+      addEventListener('pointermove', (e) => { dishX = e.clientX; });
+      addEventListener('touchmove', (e) => { dishX = e.touches[0].clientX; }, { passive: true });
+
+      const sparks = [];
+      let score = 0;
+      const milestones = { 5: 'okay, natural talent.', 15: 'the void is impressed.', 30: 'ship it. you clearly finish things.', 50: 'go build Saral AI with me instead.' };
+
+      function spawn() {
+        sparks.push({
+          x: Math.random() * innerWidth,
+          y: -20,
+          v: 1.2 + Math.random() * 1.8,
+          r: 7 + Math.random() * 9,
+          a: Math.random() * Math.PI,
+          va: (Math.random() - 0.5) * 0.06,
+        });
+        setTimeout(spawn, 350 + Math.random() * 650);
+      }
+      spawn();
+
+      function drawSpark(x, y, r, a, color) {
+        ctx.save();
+        ctx.translate(x * dpr, y * dpr);
+        ctx.rotate(a);
+        ctx.strokeStyle = color;
+        ctx.lineWidth = Math.max(2, r / 3.2) * dpr;
+        ctx.lineCap = 'round';
+        for (let i = 0; i < 3; i++) {
+          ctx.rotate(Math.PI / 3);
+          ctx.beginPath();
+          ctx.moveTo(0, -r * dpr);
+          ctx.lineTo(0, r * dpr);
+          ctx.stroke();
+        }
+        ctx.restore();
+      }
+
+      function frame() {
+        ctx.clearRect(0, 0, W, H);
+        const dishY = innerHeight - 64;
+        const dishW = 92;
+
+        for (let i = sparks.length - 1; i >= 0; i--) {
+          const s = sparks[i];
+          s.y += s.v;
+          s.a += s.va;
+          if (s.y > innerHeight + 30) { sparks.splice(i, 1); continue; }
+          if (s.y > dishY - 14 && s.y < dishY + 16 && Math.abs(s.x - dishX) < dishW / 2) {
+            sparks.splice(i, 1);
+            score++;
+            scoreEl.textContent = '✺ ' + score + (milestones[score] ? ' · ' + milestones[score] : '');
+            continue;
+          }
+          drawSpark(s.x, s.y, s.r, s.a, GOLD);
+        }
+
+        ctx.save();
+        ctx.strokeStyle = SILVER;
+        ctx.lineWidth = 4 * dpr;
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+        ctx.arc(dishX * dpr, dishY * dpr, (dishW / 2) * dpr, 0.15 * Math.PI, 0.85 * Math.PI);
+        ctx.stroke();
+        ctx.restore();
+
+        requestAnimationFrame(frame);
+      }
+      frame();
+    </script>
+  </body>
+</html>
