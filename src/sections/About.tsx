@@ -59,7 +59,7 @@ export default function About() {
               </li>
               <li className="about-fact" data-reveal style={i(6)}>
                 <span className="spark" aria-hidden="true">✺</span>
-                Delhi-NCR, India · remote-friendly
+                New Delhi, India · remote-friendly
               </li>
             </ul>
           </div>

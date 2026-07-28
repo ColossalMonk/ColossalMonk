@@ -2,7 +2,7 @@ export const IDENTITY = {
   name: 'Siddhartha Satyarthi',
   alias: 'ColossalMonk',
   role: 'Product Manager',
-  location: 'Delhi-NCR, India',
+  location: 'New Delhi, India',
   email: '17siddhartha.satyarthi@gmail.com',
   linkedin: 'https://linkedin.com/in/colossalmonk',
   tagline: 'PM by profession. Builder by instinct. Ships things people come back to.',
@@ -201,6 +201,10 @@ export const SKILLS_PRODUCT = [
   'Backlog Prioritisation',
   'Product-Led Growth',
   'Stakeholder Management',
+  'Negotiation',
+  'Risk Management',
+  'Product Vision',
+  'Cross-Functional Leadership',
 ];
 
 export const SKILLS_BUILDER = [

@@ -32,9 +32,9 @@ export default function Hero() {
             </h1>
 
             <p className="hero-sub hero-fade" style={d('0.95s')}>
-              Four-plus years shipping product across B2B, XR/VR, EdTech and
-              AI. After hours: five live products and ten games of my own. I
-              ship things people come back to.
+              Four-plus years shipping product across B2B SaaS, XR/VR, EdTech
+              and AI. After hours: five live products and ten games of my own.
+              I ship things people come back to.
             </p>
 
             <div className="hero-ctas hero-fade" style={d('1.05s')}>
