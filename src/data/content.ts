@@ -15,7 +15,51 @@ export const SOCIALS = [
   { label: 'Instagram', url: 'https://www.instagram.com/colossalmonk' },
 ];
 
-/** The lab — games and experiments. `url` = live on itch.io. */
+/** How many games are playable on the itch.io profile (keep in sync with the copy). */
+export const ITCH_GAME_COUNT = 12;
+export const ITCH_URL = 'https://colossalmonk.itch.io';
+
+export interface Game {
+  name: string;
+  url: string;
+  /** The jam it was made for. */
+  jam: string;
+  blurb: string;
+  tags: string[];
+}
+
+/** Fresh from the jams — the newest games, shown as cards above the chip shelf. */
+export const LAB_FEATURED: Game[] = [
+  {
+    name: 'Golden Hour',
+    url: 'https://colossalmonk.itch.io/golden-hour',
+    jam: '20 Second Game Jam 2026',
+    blurb:
+      'The sun is swelling and the world has twenty seconds left. You are a photographer with five shots to catch the last good moments of one evening in a paper-craft town. 50+ stories, and no two evenings alike.',
+    tags: ['Photography puzzler', 'Three.js', 'Cozy'],
+  },
+  {
+    name: 'BALAM',
+    url: 'https://colossalmonk.itch.io/balam',
+    jam: 'One Game a Month #61 · Jungle',
+    blurb:
+      'A 3D puzzle-adventure about trust. An Explorer in the physical world and a Jaguar in the spirit world must open every gate together across ten zones. No combat; the only way to fail is to lose each other.',
+    tags: ['3D puzzle', 'Co-op feel', 'Three.js'],
+  },
+  {
+    name: 'Mochi Drop 2D',
+    url: 'https://colossalmonk.itch.io/mochi-drop-2d',
+    jam: 'Codex Game Jam 2026',
+    blurb:
+      'Drop. Merge. Grow. Match two fruits and they become a bigger, cuter one; chain your way up to the legendary watermelon. The flat, physics-y take on Mochi Drop.',
+    tags: ['Merge puzzler', 'Physics', 'Relaxing'],
+  },
+];
+
+/**
+ * The lab — the rest of the shelf. `url` = playable / viewable now;
+ * no `url` = sleeping in the drawer.
+ */
 export const LAB: Array<{ name: string; url?: string }> = [
   { name: 'Pop Squad!!!', url: 'https://colossalmonk.itch.io/pop-squad' },
   { name: 'Mochi Drop ✿', url: 'https://colossalmonk.itch.io/mochi-drop' },
@@ -26,6 +70,10 @@ export const LAB: Array<{ name: string; url?: string }> = [
   { name: 'Dodge The Block', url: 'https://colossalmonk.itch.io/dodge-the-block' },
   { name: 'Cube Pew Pewing Spheres', url: 'https://colossalmonk.itch.io/cube-pew-pewing-spheres' },
   { name: 'Pokedex', url: 'https://colossalmonk.itch.io/pokedex' },
+  // Experiments that live outside itch.io
+  { name: 'PanelScout', url: 'https://panel-scout.vercel.app' },
+  { name: 'Emoji Decode', url: 'https://github.com/ColossalMonk/emoji-decode' },
+  { name: 'Small Leak, Big Wreck' },
   { name: 'BeatBloom' },
   { name: 'Glypho' },
   { name: 'Spell Duel' },
@@ -111,9 +159,33 @@ export interface Project {
   metrics: string[];
   tags: string[];
   mediaId: string;
+  /** Optional second link shown beside the main one. */
+  extraLink?: { label: string; url: string };
 }
 
 export const PROJECTS: Project[] = [
+  {
+    index: '01',
+    name: 'Nudge',
+    kind: 'Windows Launcher · Live now · Built in public',
+    url: 'https://nudgelauncher.com',
+    urlLabel: 'nudgelauncher.com',
+    description:
+      'Everything the five ships below taught me, poured into one product: a keyboard launcher for Windows. Press Alt+Space, type, get the answer. Apps, files, math, units, currency, time zones, clipboard and system commands in a single box. Native, local-first, no account and no telemetry, and the roadmap is voted on by the people on the wishlist.',
+    metrics: [
+      'Opens in ~10 ms · ~55 MB idle (my test PC)',
+      '12 releases in under 4 weeks',
+      'Nothing you type leaves the PC',
+    ],
+    tags: ['Windows', 'Native app', 'Local-first', 'Plugins', 'Wishlist-driven roadmap'],
+    mediaId: 'nudge',
+    extraLink: { label: 'Join the wishlist', url: 'https://wishlist.nudgelauncher.com' },
+  },
+  /*
+   * PAUSED, to be picked up again. Restore this block (and the `saralai`
+   * slot in src/media.config.ts, the media file is still in
+   * public/media/saralai/), then renumber the indexes below.
+   *
   {
     index: '01',
     name: 'Saral AI',
@@ -126,6 +198,7 @@ export const PROJECTS: Project[] = [
     tags: ['Voice AI', 'SMB', 'In progress'],
     mediaId: 'saralai',
   },
+   */
   {
     index: '02',
     name: 'TextLift',

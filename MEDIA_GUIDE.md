@@ -16,7 +16,8 @@ single film.
 | --- | --- | --- | --- |
 | `hero` | Hero, full-width band | 16:9 | The builder's desk island (approved, see below) |
 | `about` | About section | 16:9 | Two-sided room: product desk + builder desk |
-| `saralai` | Project 01 (dark section) | 16:9 | Telephone exchange with golden threads |
+| `nudge` | Project 01 (dark section) | 16:9 | Keycaps press, a frosted-glass pane rises, tiny glass objects slot in (final render live; more Nudge prompts in [docs/nudge-veo-prompts.md](docs/nudge-veo-prompts.md)) |
+| ~~`saralai`~~ | ~~Project 01~~ | 16:9 | Paused with the product. Telephone exchange with golden threads; render kept in `public/media/saralai/`, slot commented out in `media.config.ts` |
 | `textlift` | Project 02 (dark section) | 16:9 | Glass refinery turning letters into text |
 | `couryr` | Project 03 (dark section) | 16:9 | Envelope of light on a zip line between islands |
 | `cupidscode` | Project 04 (dark section) | 16:9 | Crane assembling a heart from golden blocks |

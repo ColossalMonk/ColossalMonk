@@ -33,7 +33,7 @@ export default function Hero() {
 
             <p className="hero-sub hero-fade" style={d('0.95s')}>
               Four-plus years shipping product across B2B SaaS, XR/VR, EdTech
-              and AI. After hours: five live products and ten games of my own.
+              and AI. After hours: six live products and twelve games of my own.
               I ship things people come back to.
             </p>
 

@@ -89,6 +89,21 @@ export const MEDIA: Record<string, MediaSlotConfig> = {
     frames: { count: 240, pad: 3, ext: 'webp' },
     flowPrompt: `Tilt-shift miniature world at night: a tiny open-air cinema on a floating island, on its small screen a silhouette dissolves into streams of tiny silver monospace characters, a few characters drift off the screen edge as golden sparks, ${WORLD}`,
   },
+  // Nudge: the keyboard launcher. Final render (Nov 2026); the full prompt
+  // pack for more Nudge clips is in docs/nudge-veo-prompts.md.
+  nudge: {
+    slug: 'nudge',
+    mode: 'video',
+    aspect: '16 / 9',
+    alt: 'Nudge: a miniature keyboard on a floating island in silver mist, a frosted-glass pane rises with a blinking caret and tiny glass icons slide in, then it sinks back into the mist',
+    video: { file: 'loop.mp4' },
+    frames: { count: 240, pad: 3, ext: 'webp' },
+    flowPrompt: `Tilt-shift miniature world at night: a tiny floating island holds a small mechanical keyboard, a short keycap and the long spacebar press down together with a soft click, a slim pane of frosted glass with a blinking golden caret rises out of the silver mist above the keys, tiny glass objects (a folder, a note, a clock, a calculator) fly in from the mist and slot into the pane in a neat row, then the pane gently sinks back into the mist so the loop can restart, ${WORLD}`,
+  },
+  /*
+   * PAUSED with Saral AI (see PROJECTS in src/data/content.ts). The render
+   * is still in public/media/saralai/. Uncomment to bring it back.
+   *
   saralai: {
     slug: 'saralai',
     mode: 'video',
@@ -98,6 +113,7 @@ export const MEDIA: Record<string, MediaSlotConfig> = {
     frames: { count: 240, pad: 3, ext: 'webp' },
     flowPrompt: `Tilt-shift miniature world at night: a tiny telephone exchange on a floating island, slim golden threads connect miniature phones while soft silver sound waves ripple between them, tiny letterforms in Devanagari and Latin drift inside the waves, ${WORLD}`,
   },
+   */
   cupidscode: {
     slug: 'cupidscode',
     mode: 'video',

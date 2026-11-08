@@ -16,10 +16,10 @@ export default function Projects() {
             Built alone. <em>Live</em> right now.
           </h2>
           <p className="projects-lede" data-kinetic>
-            Right now I am building Saral AI, my first true SaaS. The five
-            ships below taught me how: three purposeful products, one built to
-            help myself and every other job hunter, and one made purely for
-            fun.
+            Right now I am building Nudge, the Windows launcher I wanted to
+            exist. The five ships below taught me how: three purposeful
+            products, one built to help myself and every other job hunter, and
+            one made purely for fun.
           </p>
         </div>
 
@@ -54,17 +54,23 @@ export default function Projects() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  className="proj-link"
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener"
-                  data-reveal
-                  style={i(6)}
-                >
-                  Visit {project.urlLabel}
-                  <span className="arrow" aria-hidden="true">↗</span>
-                </a>
+                <div className="proj-links" data-reveal style={i(6)}>
+                  <a className="proj-link" href={project.url} target="_blank" rel="noopener">
+                    Visit {project.urlLabel}
+                    <span className="arrow" aria-hidden="true">↗</span>
+                  </a>
+                  {project.extraLink && (
+                    <a
+                      className="proj-link"
+                      href={project.extraLink.url}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      {project.extraLink.label}
+                      <span className="arrow" aria-hidden="true">↗</span>
+                    </a>
+                  )}
+                </div>
               </div>
             </article>
           ))}

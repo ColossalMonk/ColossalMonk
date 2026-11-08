@@ -41,7 +41,7 @@ export default function About() {
                 that logged 3,000+ engagements at London Fashion Week.
               </p>
               <p data-reveal style={i(3)}>
-                It all started with games: Unity, XR, ten titles on itch.io
+                It all started with games: Unity, XR, twelve titles on itch.io
                 (kawaii puzzlers included). The builder half keeps the PM half
                 honest: when you ship your own products, every roadmap
                 conversation gets sharper.

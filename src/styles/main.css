@@ -920,6 +920,138 @@ span.lab-chip {
 .lab-meta .spark {
   color: var(--accent);
 }
+.lab-meta a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+@media (hover: hover) {
+  .lab-meta a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+}
+
+/* lab: small mono labels over each shelf */
+.lab-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.lab-label .spark {
+  color: var(--accent);
+}
+.lab-label-rest {
+  margin-top: clamp(var(--space-12), 6vw, var(--space-16));
+}
+
+/* lab: featured jam games as cards */
+.lab-feature {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: var(--space-6);
+}
+.lab-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  height: 100%;
+  padding: clamp(var(--space-6), 3vw, var(--space-8));
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    transform 0.4s var(--ease-out),
+    box-shadow 0.4s var(--ease-out),
+    border-color 0.3s ease;
+}
+.lab-card-jam {
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.lab-card-name {
+  font-size: var(--text-heading);
+  font-weight: 460;
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--ink);
+}
+.lab-card-blurb {
+  color: var(--ink-soft);
+  font-size: var(--text-small);
+  line-height: var(--leading-normal);
+  max-width: 44ch;
+}
+.lab-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+.lab-card-tag {
+  padding: var(--space-1) var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+.lab-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--ink);
+}
+.lab-card-cta .arrow {
+  color: var(--accent);
+  transition: transform 0.3s var(--ease-out);
+}
+@media (hover: hover) {
+  .lab-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+  }
+  .lab-card:hover .lab-card-cta .arrow {
+    transform: translate(3px, -3px);
+  }
+}
+.lab-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* projects: primary + secondary link row */
+.proj-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-8);
+  margin-top: var(--space-8);
+}
+.proj-links .proj-link {
+  margin-top: 0;
+}
 
 /* ── recognition ──────────────────────────── */
 .recog-grid {

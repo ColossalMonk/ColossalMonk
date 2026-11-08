@@ -2,7 +2,7 @@
 
 [![Siddhartha Satyarthi · Product Manager · ColossalMonk](https://colossalmonk.vercel.app/og.jpg)](https://colossalmonk.vercel.app/)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=500&size=18&duration=2600&pause=900&color=C9A96A&center=true&vCenter=true&width=520&lines=PM+by+profession;Builder+by+instinct;Ships+things+people+come+back+to;Currently+building+Saral+AI)](https://colossalmonk.vercel.app/)
+[![Typing SVG](https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=500&size=18&duration=2600&pause=900&color=C9A96A&center=true&vCenter=true&width=520&lines=PM+by+profession;Builder+by+instinct;Ships+things+people+come+back+to;Currently+building+Nudge)](https://colossalmonk.vercel.app/)
 
 **[✺ portfolio](https://colossalmonk.vercel.app/)** · **[résumé](https://colossalmonk.vercel.app/Siddhartha-Satyarthi-PM-Resume.pdf)** · psst: [even my 404 is a game](https://colossalmonk.vercel.app/404)
 
@@ -13,24 +13,32 @@
 Product Manager with 4+ years across B2B, XR/VR, EdTech and AI. By day I run
 discovery, roadmaps and go-to-market: 500+ startup products coached at Nasscom
 Foundation, 20+ incubated, 170+ validated for product-market fit. By night I am
-**ColossalMonk**, and I ship my own things: five live products, ten games, and
+**ColossalMonk**, and I ship my own things: six live products, twelve games, and
 counting.
 
-**Now building:** [Saral AI](https://saral-ai-delta.vercel.app/), my first true
-SaaS — multilingual AI voice agents (Hindi · English · Hinglish) that answer
-business calls 24/7 for Indian SMBs.
+**Now building:** [Nudge](https://nudgelauncher.com), a keyboard launcher for
+Windows. Press <kbd>Alt</kbd>+<kbd>Space</kbd>, type, get the answer: apps,
+files, math, units, currency, clipboard and system commands in one box that
+opens in about 10 ms, native, local-first, no account. The roadmap is
+voted on by the [wishlist](https://wishlist.nudgelauncher.com).
+
+<!--
+PAUSED, to be picked up again: Saral AI (https://saral-ai-delta.vercel.app/),
+multilingual AI voice agents (Hindi · English · Hinglish) that answer business
+calls 24/7 for Indian SMBs. Restore its row in the Ships table below.
+-->
 
 ## ✺ Ships
 
 | | Ship | What it is |
 |---|---|---|
-| 01 | [Saral AI](https://saral-ai-delta.vercel.app/) | AI voice agents for Indian SMBs · the first true SaaS · building now |
+| 01 | [Nudge](https://nudgelauncher.com) | Keyboard launcher for Windows · Alt+Space, type, get the answer · native, local-first · live, roadmap voted on by the wishlist |
 | 02 | [TextLift](https://textlift.space) | AI text-analysis suite · 6 tools · BYOK · 50+ MAU with zero marketing |
 | 03 | [Couryr](https://couryr.netlify.app) | Zero-trace E2E-encrypted P2P file transfer · nothing stored, ever |
 | 04 | [Cupid's Code](https://cupidscode.netlify.app) | Seasonal interactive experience · 200+ users at peak |
 | 05 | [JobHuntin](https://jobhuntin.netlify.app/) | AI-powered job-hunt pipeline · built for myself and fellow hunters |
 | 06 | [AsciiStream](https://asciistream.netlify.app/) | Real-time 60FPS ASCII webcam filter · purely for fun |
-| ✺ | [10 games on itch.io](https://colossalmonk.itch.io) | Kawaii puzzlers, retro arcade, and one game coded entirely by ChatGPT |
+| ✺ | [12 games on itch.io](https://colossalmonk.itch.io) | Fresh from the jams: [Golden Hour](https://colossalmonk.itch.io/golden-hour) (20-second photo puzzler), [BALAM](https://colossalmonk.itch.io/balam) (a jungle trust-puzzler), [Mochi Drop 2D](https://colossalmonk.itch.io/mochi-drop-2d). Plus kawaii puzzlers, retro arcade, and one game coded entirely by ChatGPT |
 
 ## ✺ Stack
 

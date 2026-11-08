@@ -46,5 +46,5 @@ let power users bring their own API keys (BYOK) to remove limits entirely.
 
 ## What it changed
 
-Every lesson here fed the next products, and ultimately Saral AI: [one
+Every lesson here fed the next products, and ultimately Nudge: [one
 sentence connecting the arc].
